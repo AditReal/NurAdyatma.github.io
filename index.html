@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Tour</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .banner {
+            background: url("https://www.urlaubsguru.de/wp-content/uploads/2016/08/rome-aerial-view_shutterstock_390573763.jpg") no-repeat center center;
+            background-size: cover;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .lingkaran {
+            display: inline-block;
+            border-radius: 50%;
+            width: 150px;
+            margin: auto;
+            height: 150px;
+            color: #fff;
+            background-color: #0d6efd;
+        }
+
+        .lingkaran i {
+            position: relative;
+            top: 30px;
+        }
+
+        .crop-img {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .tim img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border: 10px solid #cccccc;
+        }
+
+        a.social {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            background-color: #333;
+            line-height: 40px;
+        }
+
+        .client img {
+            height: auto;
+            max-height: 50px;
+        }
+
+        .kontak {
+            background: url(https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80) no-repeat center center;
+            background-size: cover;
+            padding-bottom: 20%;
+            padding-top: 20%;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .country-card {
+            transition: transform 0.3s;
+        }
+        
+        .country-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .flag-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">European Grand Tour</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#destinations">Destinasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tours">Tur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#guides">Pemandu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner -->
+    <div class="container-fluid banner">
+        <div class="container text-center">
+            <h4 class="display-6">Temukan Keajaiban Eropa</h4>
+            <h3 class="display-1">Bonjour! Ciao! Hallo!</h3>
+            <a href="https://r.search.yahoo.com/rdclks/dWU9N2xiNjg5NWs1MGJkOSZ1dD0xNzUwMDg1MDMzMjE5JnVvPTc3MTAzNDU0NTU1NDMwJmx0PTImcz0xJmVzPThUV0pjYUtlWWFYWnYwSHAzTW16WDI1X3NDQ196UzVWeHRzSklVTmYuMy5SWmozYXNIamdqajYuS3NVMkk3a3NkRDA3dk9zaVAzUFJMQjE1/RV=2/RE=1752677033/RO=14/RU=https%3a%2f%2fwww.bing.com%2faclick%3fld%3de8y_6vadZbXkKnu0z19P115zVUCUz6LduWPBgEwx6uE-63reYr9koPlYv3WuSkT44HbuQ-WzvdMsPyASNf0JLAB5SXE2ijPMe7SMEXESLhbTYEF9mN6GJyrdaXaMyHTQceZ07rLWuXrhKk-xuOFpOi-rRfO9cKpAaFh3Ws3Yg74QN-_CXOyW7a-a1JNbFx4qT1BKUaXg%26u%3daHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MTg4NDc2MTQ2OCUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODg4MjczMDA1OCUyNmRzX2FfY2lkJTNkNzA3NDgzMzcxNSUyNmRzX2FfY2FpZCUzZDIyNDc4MTkwMTY5JTI2ZHNfYV9hZ2lkJTNkMTc3MTY3Nzg1NjE0JTI2ZHNfYV9saWQlM2Rrd2QtNjA4OTYxOTAlMjYlMjZkc19lX2FkaWQlM2Q3NzEwMzQ1NDU1NTQzMCUyNmRzX2VfdGFyZ2V0X2lkJTNka3dkLTc3MTAzNjc5NTExNjc2JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cudmlhdG9yLmNvbSUyZkV1cm9wZSUyZmQ2LXR0ZCUzZm0lM2QzMzk1MyUyNnN1cGFnJTNkMTIzMzY1MzEyNzA3MjE1MiUyNnN1cGNhJTNkNjc2OTk0NTk5JTI2c3Vwc2MlM2Rrd2QtNzcxMDM2Nzk1MTE2NzYlMjZzdXBhaSUzZDc3MTAzNDU0NTU1NDMwJTI2c3VwZHYlM2RjJTI2c3VwbnQlM2RvJTI2c3VwbHAlM2QxNjU1NDIlMjZzdXBsaSUzZDExNjI5NyUyNnN1cHRpJTNka3dkLTc3MTAzNjc5NTExNjc2JTI2dHNlbSUzZHRydWUlMjZzdXBjaSUzZGt3ZC03NzEwMzY3OTUxMTY3NiUyNmdjbGlkJTNkY2JhNTJlYzk3MjZhMTM0NjYzMWI0Njk5NWZjM2M3MjIlMjZnY2xzcmMlM2QzcC5kcyUyNiUyNm1zY2xraWQlM2RjYmE1MmVjOTcyNmExMzQ2NjMxYjQ2OTk1ZmMzYzcyMg%26rlid%3dcba52ec9726a1346631b46995fc3c722/RK=2/RS=jsiOraKIJUVBobWXILo2zBx18Tc-;_ylt=AwrgNcapLVBouzsS9IRXNyoA;_ylu=Y29sbwNncTEEcG9zAzIEdnRpZAMEc2VjA292LXRvcA--;_ylc=X3IDMgRydAMw?IG=0ae035c636314bbda101b683588593e2">
+                <button type="button" class="btn btn-light btn-lg">Jelajahi Destinasi</button>
+            </a>
+        </div>
+    </div>
+    <!-- Destinations -->
+    <div class="container-fluid layanan pt-5 pb-5">
+        <div class="container text-center">
+            <h2 class="display-3" id="destinations">Destinasi Unggulan</h2>
+            <p>Dari Paris yang romantis hingga Roma yang bersejarah, jelajahi kota-kota paling menawan di Eropa dengan tur kami yang dirancang oleh ahli.</p>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                     <span class="lingkaran"><i class="fas fa-landmark fa-5x"></i></span>
+                    <h3 class="mt-3">Prancis</h3>
+                    <p>Rasakan romantisme Paris, kebun anggur Bordeaux, dan kemewahan French Riviera.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <span class="lingkaran"><i class="fas fa-pizza-slice fa-5x"></i></span>
+                    <h3 class="mt-3">Italia</h3>
+                    <p>Dari reruntuhan kuno Roma, kanal Venesia, hingga perbukitan Tuscany - la dolce vita menanti!</p>
+                </div>
+
+                <div class="col-md-4">
+                    <span class="lingkaran"><i class="fas fa-futbol fa-5x"></i></span>
+                    <h3 class="mt-3">Spanyol</h3>
+                    <p>Barcelona yang semarak, Madrid yang bersejarah, dan pantai cerah Costa del Sol - ¡Olé!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tours -->
+    <div class="container-fluid pt-5 pb-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-3" id="tours">Tur Pilihan</h2>
+            <p>Tur kami yang dipilih dengan cermat menawarkan pengalaman tak terlupakan di destinasi paling spektakuler Eropa.</p>
+            <div class="row pt-4 gx-4 gy-4">
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://c.wallhere.com/photos/f1/66/building_Paris_France_Eiffel_Tower-136285.jpg!d" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇫🇷</div>
+                            <h5 class="card-title">Paris & Normandy</h5>
+                            <p class="card-text">Tur 7 hari termasuk Menara Eiffel, Louvre, Mont Saint-Michel, dan pantai pendaratan D-Day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://www.tripsavvy.com/thmb/EffhS9BiFQZ-eM3cinXFKvT1xK8=/3865x2576/filters:no_upscale():max_bytes(150000):strip_icc()/grand-canal-in-venice-italy-584393947-58e23b815f9b58ef7e5335cd.jpg" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇮🇹</div>
+                            <h5 class="card-title">Highlight Italia</h5>
+                            <p class="card-text">Perjalanan 10 hari melintasi Roma, Florence, Venesia, dan Pantai Amalfi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://www.worldatlas.com/upload/59/f0/6f/shutterstock-2055397688-1.jpg" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇬🇷</div>
+                            <h5 class="card-title">Petualangan Pulau Yunani</h5>
+                            <p class="card-text">Petualangan 14 hari menjelajahi Athena, Santorini, Mykonos, dan Kreta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://broganabroad.com/wp-content/uploads/2020/12/Cartagena-Depositphotos_381474686_xl-2015-Edited-by-me-.jpg" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇪🇸</div>
+                            <h5 class="card-title">Fiesta Spanyol</h5>
+                            <p class="card-text">Tur 9 hari ke Madrid, Barcelona, Seville, dan Costa del Sol.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://www.muchbetteradventures.com/magazine/content/images/2019/07/10083602/iStock-499263804.jpg" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇦🇹🇨🇭</div>
+                            <h5 class="card-title">Petualangan Alpen</h5>
+                            <p class="card-text">Tur 12 hari melintasi Pegunungan Alpen Swiss, kastil Austria, dan Bavaria Jerman.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card country-card h-100">
+                        <img src="https://cdn.wallpapersafari.com/6/73/yZ5sQe.jpg" class="card-img-top crop-img">
+                        <div class="card-body">
+                            <div class="flag-icon">🇬🇧</div>
+                            <h5 class="card-title">Penjelajah Kepulauan Inggris</h5>
+                            <p class="card-text">Tur komprehensif 15 hari meliputi Inggris, Skotlandia, Wales, dan Irlandia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+     <div class="container-fluid pt-5 pb-5">
+        <div class="container">
+            <h2 class="display-3 text-center" id="about">Tentang Tur Kami</h2>
+            <p class="text-center">Dengan pengalaman lebih dari 20 tahun, kami mengkhususkan diri dalam menciptakan pengalaman perjalanan Eropa yang tak terlupakan melampaui rute turis biasa.</p>
+            <div class="clearfix pt-5">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="col-md-6 float-md-end mb-3 crop-img" width="300" height="300">
+                <p>Kami fokus pada pengalaman autentik yang membuat Anda merasakan kehidupan lokal sambil menikmati highlight destinasi.</p>
+                <p>Ukuran grup kecil (maks 20 orang) memastikan perhatian personal dan fleksibilitas.</p>
+                <p>Kami bekerja dengan pemandu lokal dan bisnis setempat untuk mendukung pariwisata berkelanjutan di setiap destinasi.</p>
+                <p>Tur kami mencakup akomodasi pilihan yang mengombinasikan kenyamanan dengan karakter lokal.</p>
+                <p>Kami mengurus semua logistik sehingga Anda bisa fokus menikmati perjalanan.</p>
+            </div>
+        </div>
+     </div>
+     <!-- Guides -->
+      <div class="container-fluid pt-5 pb-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-3" id="guides">Pemandu Ahli Dan Owner Kami.</h2>
+            <p>Kenali beberapa pemandu berpengetahuan kami yang akan menghidupkan sejarah dan budaya Eropa selama perjalanan Anda.</p>
+            <div class="row pt-4 gx-4 gy-4">
+                <div class="col-md-4 text-center tim">
+                    <img src="foto adit.jpg" class="rounded-circle mb-3">
+                    <h4>Nur Adyatma</h4>
+                    <p>Owner European Tour</p>
+                    <p>Dari Mimpi Jadi Kenyataan.</p>
+                    <p>
+                        <a href="" class="social"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center tim">
+                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" class="rounded-circle mb-3">
+                    <h4>Frankie</h4>
+                    <p>Spesialis Italia</p>
+                    <p>Sejarawan seni fasih berbahasa Italia dan bersemangat tentang seni Renaisans.</p>
+                    <p>
+                        <a href="" class="social"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center tim">
+                    <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" class="rounded-circle mb-3">
+                    <h4>Sophia</h4>
+                    <p>Spesialis Eropa Tengah</p>
+                    <p>Ahli sejarah Jerman dan Austria dengan fokus pada warisan musik.</p>
+                    <p>
+                        <a href="" class="social"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+       <!-- Contact -->
+        <div class="container-fluid pt-5 pb-5 kontak">
+            <div class="container">
+                <h2 class="display-3 text-center" id="contact">Rencanakan Petualangan Eropa Anda</h2>
+                <p class="text-center">Siap menjelajahi Eropa? Hubungi kami untuk mulai merencanakan itinerary sempurna Anda.</p>
+                <div class="row pb-3">
+                    <div class="col-md-6">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="Nama">
+                        <input class="form-control form-control-lg mb-3" type="text" placeholder="Email">
+                        <input class="form-control form-control-lg" type="text" placeholder="Telepon">
+                    </div>
+                    <div class="col-md-6">
+                        <textarea class="form-control form-control-lg" rows="5" placeholder="Ceritakan tentang liburan impian Anda di Eropa..."></textarea>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto text-center">
+                    <button type="button" class="btn btn-light btn-lg">Kirim Permintaan</button>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center pt-5 pb-5">
+            European Tour All Rights Reserved &copy; 2025 | Lisensi Agen Perjalanan #EU123456
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
